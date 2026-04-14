@@ -276,14 +276,12 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
       gap: 1.4rem;
-      max-width: 1100px;
+      max-width: 860px;
       margin: 0 auto;
     }
     .gallery-item { position: relative; overflow: hidden; border-radius: 14px; cursor: pointer; }
-    .gallery-item:first-child { grid-row: span 2; }
-    .gallery-item:first-child .gallery-img { aspect-ratio: auto; height: 100%; }
     .gallery-img {
       width: 100%;
       aspect-ratio: 4/3;
@@ -579,33 +577,6 @@
         </div>
         <div class="gallery-overlay">
           <div class="gallery-caption">Rénovation enduit façade pierre<span>Grans · 2024</span></div>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <span class="gallery-placeholder-icon">🏚️</span>
-          <span class="gallery-placeholder-text">Votre photo ici</span>
-        </div>
-        <div class="gallery-overlay">
-          <div class="gallery-caption">Ravalement de façade<span>Salon-de-Provence · 2024</span></div>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <span class="gallery-placeholder-icon">🧱</span>
-          <span class="gallery-placeholder-text">Votre photo ici</span>
-        </div>
-        <div class="gallery-overlay">
-          <div class="gallery-caption">Isolation thermique par l'extérieur<span>Istres · 2025</span></div>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <div class="gallery-placeholder">
-          <span class="gallery-placeholder-icon">🎨</span>
-          <span class="gallery-placeholder-text">Votre photo ici</span>
-        </div>
-        <div class="gallery-overlay">
-          <div class="gallery-caption">Finitions &amp; peintures extérieures<span>Miramas · 2025</span></div>
         </div>
       </div>
     </div>
