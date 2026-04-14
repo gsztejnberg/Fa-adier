@@ -43,6 +43,8 @@
       align-items: center;
       justify-content: space-between;
       padding: 1.25rem 2.5rem;
+      background: rgba(38,12,4,.5);
+      backdrop-filter: blur(10px);
       transition: background .35s, padding .35s, box-shadow .35s;
     }
     #navbar.scrolled {
@@ -97,15 +99,15 @@
       padding: 7rem 2rem 5rem;
       position: relative;
       overflow: hidden;
-      background: linear-gradient(160deg, #7A5C3A 0%, #B5663C 30%, #C4714A 55%, #C4960A 85%, #8B9D6A 100%);
+      background: linear-gradient(150deg, #3C1808 0%, #6A2B12 28%, #9B4220 58%, #7A4E0E 82%, #4A2C0A 100%);
     }
     #accueil::before {
       content: '';
       position: absolute;
       inset: 0;
       background-image:
-        radial-gradient(ellipse at 20% 80%, rgba(154,125,176,.18) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(122,155,90,.15) 0%, transparent 45%);
+        radial-gradient(ellipse at 15% 85%, rgba(196,140,50,.22) 0%, transparent 52%),
+        radial-gradient(ellipse at 85% 15%, rgba(160,80,30,.18) 0%, transparent 48%);
       pointer-events: none;
     }
     #accueil::after {
@@ -195,6 +197,39 @@
       transform: translateY(-3px);
       box-shadow: 0 12px 36px rgba(0,0,0,.22);
     }
+    .hero-sections-nav {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2.8rem;
+      flex-wrap: wrap;
+    }
+    .hero-section-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(8px);
+      color: rgba(255,255,255,.9);
+      padding: 1.2rem 2.2rem;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: background .25s, transform .25s, border-color .25s;
+      min-width: 110px;
+    }
+    .hero-section-link .hs-icon { font-size: 1.7rem; margin-bottom: .1rem; }
+    .hero-section-link:hover {
+      background: rgba(255,255,255,.18);
+      border-color: rgba(255,255,255,.45);
+      transform: translateY(-4px);
+    }
+
     .scroll-cue {
       position: absolute;
       bottom: 2.2rem;
@@ -509,6 +544,21 @@
         <div class="badge"><span class="badge-icon">⭐</span> +10 ans d'expérience</div>
       </div>
       <a href="#contact" class="btn-hero">Demander un devis gratuit</a>
+
+      <nav class="hero-sections-nav" aria-label="Sections du site">
+        <a href="#galerie" class="hero-section-link">
+          <span class="hs-icon">🖼️</span>
+          <span>Galerie</span>
+        </a>
+        <a href="#avis" class="hero-section-link">
+          <span class="hs-icon">⭐</span>
+          <span>Avis clients</span>
+        </a>
+        <a href="#contact" class="hero-section-link">
+          <span class="hs-icon">📋</span>
+          <span>Devis gratuit</span>
+        </a>
+      </nav>
     </div>
     <div class="scroll-cue">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
