@@ -9,20 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream:        #FBF5E6;
-      --cream-alt:    #F0E4C8;
-      --terracotta:   #C4714A;
-      --terra-dk:     #A05538;
-      --ochre:        #C4960A;
-      --ochre-lt:     #FFD580;
-      --olive:        #7A9B5A;
-      --stone:        #8B7355;
-      --lavender:     #9B7DB0;
-      --dark:         #2C2416;
-      --text:         #4A3728;
-      --muted:        #7A6855;
-      --white:        #FDFAF4;
-      --border:       rgba(196,113,74,0.15);
+      --cream:        #FFFFFF;
+      --cream-alt:    #F4F6F9;
+      --terracotta:   #1A2B4A;
+      --terra-dk:     #2D4170;
+      --ochre:        #1A2B4A;
+      --ochre-lt:     #93C5FD;
+      --stone:        #6B7280;
+      --dark:         #1A2B4A;
+      --text:         #374151;
+      --muted:        #6B7280;
+      --white:        #FFFFFF;
+      --border:       rgba(26,43,74,.1);
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -43,7 +41,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 1.25rem 2.5rem;
-      background: rgba(38,12,4,.5);
+      background: rgba(26,43,74,.6);
       backdrop-filter: blur(10px);
       transition: background .35s, padding .35s, box-shadow .35s;
     }
@@ -99,7 +97,7 @@
       padding: 7rem 2rem 5rem;
       position: relative;
       overflow: hidden;
-      background: #8B6240;
+      background: #1A2B4A;
     }
     #accueil::before {
       content: '';
@@ -144,7 +142,7 @@
       margin-bottom: 1.4rem;
       font-weight: 700;
     }
-    .hero-title em { font-style: italic; color: var(--ochre-lt); }
+    .hero-title em { font-style: italic; color: #93C5FD; }
     .hero-sub {
       font-size: 1.12rem;
       color: rgba(255,255,255,.82);
@@ -178,7 +176,7 @@
     .btn-hero {
       display: inline-block;
       background: #fff;
-      color: var(--terracotta);
+      color: #1A2B4A;
       padding: 1rem 2.8rem;
       border-radius: 50px;
       text-decoration: none;
@@ -189,8 +187,8 @@
       transition: all .3s;
     }
     .btn-hero:hover {
-      background: var(--ochre-lt);
-      color: var(--dark);
+      background: #93C5FD;
+      color: #1A2B4A;
       transform: translateY(-3px);
       box-shadow: 0 12px 36px rgba(0,0,0,.22);
     }
@@ -357,7 +355,7 @@
       pointer-events: none;
     }
     .stars { display: flex; gap: .18rem; margin-bottom: 1.1rem; }
-    .star-filled { color: #F5A623; font-size: 1.05rem; }
+    .star-filled { color: #F59E0B; font-size: 1.05rem; }
     .star-empty  { color: #DDD;    font-size: 1.05rem; }
     .review-text {
       font-style: italic;
