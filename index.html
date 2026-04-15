@@ -9,20 +9,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream:        #FBF5E6;
-      --cream-alt:    #F0E4C8;
-      --terracotta:   #C4714A;
-      --terra-dk:     #A05538;
-      --ochre:        #C4960A;
-      --ochre-lt:     #FFD580;
-      --olive:        #7A9B5A;
+      --cream:        #F7F4EF;
+      --cream-alt:    #EDE8DF;
+      --terracotta:   #8B6A3E;
+      --terra-dk:     #6B4E2A;
+      --ochre:        #8B6A3E;
+      --ochre-lt:     #C4A882;
       --stone:        #8B7355;
-      --lavender:     #9B7DB0;
-      --dark:         #2C2416;
-      --text:         #4A3728;
+      --dark:         #1C1610;
+      --text:         #3A2E22;
       --muted:        #7A6855;
-      --white:        #FDFAF4;
-      --border:       rgba(196,113,74,0.15);
+      --white:        #FDFAF6;
+      --border:       rgba(139,106,62,.12);
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -43,21 +41,21 @@
       align-items: center;
       justify-content: space-between;
       padding: 1.25rem 2.5rem;
-      background: rgba(38,12,4,.5);
+      background: rgba(247,244,239,.88);
       backdrop-filter: blur(10px);
       transition: background .35s, padding .35s, box-shadow .35s;
     }
     #navbar.scrolled {
-      background: rgba(251,245,230,.96);
+      background: rgba(247,244,239,.98);
       backdrop-filter: blur(12px);
-      box-shadow: 0 2px 24px rgba(44,36,22,.1);
+      box-shadow: 0 2px 24px rgba(28,22,16,.08);
       padding: .85rem 2.5rem;
     }
     .nav-logo {
       font-family: 'Playfair Display', serif;
       font-size: 1.35rem;
       font-weight: 700;
-      color: #fff;
+      color: #1C1610;
       text-decoration: none;
       letter-spacing: .3px;
       transition: color .25s;
@@ -70,7 +68,7 @@
     }
     .nav-links a {
       text-decoration: none;
-      color: rgba(255,255,255,.9);
+      color: #3A2E22;
       font-size: .82rem;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -99,22 +97,10 @@
       padding: 7rem 2rem 5rem;
       position: relative;
       overflow: hidden;
-      background: #8B6240;
+      background: #F7F4EF;
     }
-    #accueil::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
-    #accueil::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      opacity: .04;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      pointer-events: none;
-    }
+    #accueil::before { display: none; }
+    #accueil::after  { display: none; }
     .hero-inner {
       position: relative;
       z-index: 1;
@@ -124,9 +110,9 @@
       display: inline-flex;
       align-items: center;
       gap: .6rem;
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.28);
-      color: rgba(255,255,255,.92);
+      background: rgba(139,106,62,.08);
+      border: 1px solid rgba(139,106,62,.2);
+      color: #8B6A3E;
       padding: .45rem 1.3rem;
       border-radius: 50px;
       font-size: .78rem;
@@ -134,20 +120,19 @@
       text-transform: uppercase;
       font-weight: 700;
       margin-bottom: 1.8rem;
-      backdrop-filter: blur(6px);
     }
     .hero-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.6rem, 6.5vw, 5rem);
-      color: #fff;
+      color: #1C1610;
       line-height: 1.1;
       margin-bottom: 1.4rem;
       font-weight: 700;
     }
-    .hero-title em { font-style: italic; color: var(--ochre-lt); }
+    .hero-title em { font-style: italic; color: #8B6A3E; }
     .hero-sub {
       font-size: 1.12rem;
-      color: rgba(255,255,255,.82);
+      color: #3A2E22;
       font-weight: 300;
       max-width: 560px;
       margin: 0 auto 3rem;
@@ -164,16 +149,15 @@
       display: flex;
       align-items: center;
       gap: .55rem;
-      background: rgba(255,255,255,.11);
-      border: 1px solid rgba(255,255,255,.22);
-      backdrop-filter: blur(6px);
-      color: #fff;
+      background: rgba(255,255,255,.8);
+      border: 1px solid rgba(139,106,62,.2);
+      color: #3A2E22;
       padding: .65rem 1.35rem;
       border-radius: 10px;
       font-size: .88rem;
       transition: background .2s;
     }
-    .badge:hover { background: rgba(255,255,255,.2); }
+    .badge:hover { background: #fff; }
     .badge-icon { font-size: 1.15rem; }
     .btn-hero {
       display: inline-block;
@@ -206,10 +190,9 @@
       flex-direction: column;
       align-items: center;
       gap: .5rem;
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.22);
-      backdrop-filter: blur(8px);
-      color: rgba(255,255,255,.9);
+      background: rgba(139,106,62,.08);
+      border: 1px solid rgba(139,106,62,.2);
+      color: #3A2E22;
       padding: 1.2rem 2.2rem;
       border-radius: 16px;
       text-decoration: none;
@@ -222,8 +205,8 @@
     }
     .hero-section-link .hs-icon { font-size: 1.7rem; margin-bottom: .1rem; }
     .hero-section-link:hover {
-      background: rgba(255,255,255,.18);
-      border-color: rgba(255,255,255,.45);
+      background: rgba(139,106,62,.15);
+      border-color: rgba(139,106,62,.4);
       transform: translateY(-4px);
     }
 
@@ -242,7 +225,8 @@
       text-transform: uppercase;
       animation: bounce 2.4s infinite;
     }
-    .scroll-cue svg { opacity: .6; }
+    .scroll-cue { color: rgba(28,22,16,.35); }
+    .scroll-cue svg { opacity: .5; }
     @keyframes bounce {
       0%,100% { transform: translateX(-50%) translateY(0); }
       50%      { transform: translateX(-50%) translateY(6px); }
